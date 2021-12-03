@@ -54,8 +54,10 @@ include ("connect.php");
             echo "Choose an image eith extension [jpg, jpeg, png, gif]";
 
         } elseif($count > 0) {
+            
             echo "Profile name already exist, please choose another";
-        }else {
+            
+        } else {
 
             $uploadedFile = rand(0, 1000000) . "_" . $fileName;
 
