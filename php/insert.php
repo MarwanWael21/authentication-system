@@ -18,15 +18,15 @@ include ("connect.php");
 
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-        $file = $_FILES['avatar'];
+        $file       = $_FILES['avatar'];
 
-        $fileName = $file['name'];
+        $fileName   = $file['name'];
 
-        $fileTmp = $file['tmp_name'];
+        $fileTmp    = $file['tmp_name'];
 
-        $fileType = $file['type'];
+        $fileType   = $file['type'];
 
-        $fileSize = $file['type'];
+        $fileSize   = $file['type'];
 
 
         $allowedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
@@ -49,11 +49,11 @@ include ("connect.php");
 
             echo "All inputs are requierd";
 
-        } elseif(!in_array($dump, $allowedExtensions)) {
+        } elseif (!in_array($dump, $allowedExtensions)) {
 
             echo "Choose an image eith extension [jpg, jpeg, png, gif]";
 
-        } elseif($count > 0) {
+        } elseif ($count > 0) {
             
             echo "Profile name already exist, please choose another";
             
