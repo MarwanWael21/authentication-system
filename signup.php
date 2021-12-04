@@ -44,7 +44,7 @@ $token = $_SESSION['token'];
                 <label for="avatar" class="form-label">Avatar</label>
                 <input type="file" name="avatar" class="form-control" id="avatar">
             </div>
-            <button type="submit" class="btn btn-primary form-control" name="submit">Submit</button>
+            <button type="submit" class="btn btn-primary form-control" name="submit" onclick="formSubmit('php/insert_user.php', 'signin.php')">Submit</button>
         </form>
     </div>
     <script src="js/script.js"></script>
