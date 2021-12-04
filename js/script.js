@@ -1,16 +1,14 @@
 const form = document.querySelector("form"),
-continueBtn = form.querySelector(".btn"),
 alert = form.querySelector(".alert")
 
 form.onsubmit = e => {
     e.preventDefault();
 }
 
-continueBtn.onclick = () => {
-
+function formSubmit($location, $herf){
     // starting ajax   
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/insert.php", true);
+    xhr.open("POST", $location, true);
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
@@ -20,7 +18,7 @@ continueBtn.onclick = () => {
                     alert.textContent = data;
                 } else {
                     alert.style.display = "none";
-                    location.href="signin.php";
+                    location.href=$herf;
                 }
             }
         }
