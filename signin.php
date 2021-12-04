@@ -32,10 +32,10 @@ $token = $_SESSION['token'];
                 <label for="password" class="form-label">password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="password">
             </div>
-            <button type="submit" class="btn btn-primary form-control" name="submit">Submit</button>
+            <button type="submit" class="btn btn-primary form-control" name="submit" onclick="formSubmit('php/check_user.php', 'home.php')">Submit</button>
         </form>
     </div>
-    <script src="js/script2.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
